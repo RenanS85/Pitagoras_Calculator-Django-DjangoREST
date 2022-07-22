@@ -1,0 +1,42 @@
+{% extends 'base.html' %} 
+{% load static %}
+{%block 'result'%}
+{% if apiresponse %} 
+  <div id="api">
+    <div class="alert alert-info" role="alert">
+      <p class="lead">{{ apiresponse }}</p>
+    </div>
+  </div>
+{%endif%}
+
+<div class="container">
+  <div class="col-lg-12 text-center">
+    <div>
+      {% if apiresponse %}
+        <label>Hipotenusa<p class= 'lead' id="hip" >{{ hipotenusa }}</p></label><br>
+      {%else%}
+        <label>Hipotenusa<p class= 'lead' id="hip" >Aguardando...</p></label><br>
+      {% endif %}
+    </div>
+    <div>
+  <div class="col-lg-12 text-center">
+    <div>
+      {% if apiresponse %}
+        <label>Cateto Oposto<p class= 'lead' id="catetoOp">{{ catetoOposto }}</p></label><br>
+      {%else%}
+        <label>Cateto Oposto<p class= 'lead' id="catetoOp">Aguardando...</p></label><br>
+      {%endif%}
+    </div>
+  </div>
+  <div class="col-lg-12 text-center">
+    <div>
+      {% if apiresponse %}
+        <label>Cateto Adjacente<p class= 'lead' id="catetoAdj" >{{ catetoOposto }}</p></label><br>
+      {% else %}
+        <label>Cateto Adjacente<p class= 'lead' id="catetoAdj" >Aguardando...</p></label><br>
+      {%endif%}
+    </div>
+  </div>
+</div>
+</div>
+{%endblock%}

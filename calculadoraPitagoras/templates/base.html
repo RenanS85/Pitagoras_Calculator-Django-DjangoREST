@@ -1,0 +1,71 @@
+{% include 'partials/_head.html' %}
+{% load static %}
+
+<body>
+  
+{% include 'partials/_nav.html' %}
+
+  <!-- Page Content -->
+  <div class="container" style="margin-bottom: 20px ;">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h1 class="mt-5" style="margin-bottom: 20px ;">Cálculadora de Pitágoras</h1>
+          <p class="lead">O Teorema de Pitágoras mostra a relação matemática entre os lados de um triângulo retângulo.
+            Digite dois lados do triângulo para calcular o terceiro, ou digite os três lados e veja se eles permitem a existência do triângulo.</p>
+          {%block 'result'%}{%endblock%}
+        </div>
+      </div>
+  </div>
+
+<form method='POST' id="form">
+  {% csrf_token %} 
+  <div class="col-lg-12 text-center">
+    <div id="hip">
+      <p class="lead"><label><strong>Hipotenusa</strong></label><input id="hipotenusa" placeholder="Hipotenusa" 
+        class="inp" type="number" name="hipotenusa" min=1></p>
+    </div>
+  </div>
+  <div class="col-lg-12 text-center">
+    <div id="co">
+      <p class="lead"><label><strong>Cateto</strong></label><input id = "catetoOposto"class="inp" type="number"
+        placeholder="Cateto oposto" name='catetoOposto' min=1></p>
+    </div>
+  </div>
+  <div class="col-lg-12 text-center">
+    <div id="ca">
+    <p class="lead"><label><strong>Cateto</strong></label><input id= "catetoAdjacente" class="inp" type="number" 
+      placeholder="Cateto adjacente" name="catetoAdjacente" min=1></p>
+    </div>
+  </div>
+  <div class="col-lg-12 text-center">
+    <button type="submit" class="btn btn-primary" style="margin-left: 218px ;" onclick="api()">Calcular</button>
+  </div>
+</form>
+
+  <div class="container" style="margin-top: 20px;">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <img src="{% static '_images/triangulo.png' %}">
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-12 text-center">
+     <h3 class="mt-5">Algumas condições matemáticas:</h3>
+      <p class="lead">- A hipotenusa deve ser o maior lado</p>
+      <p class="lead">- Os 3 lados não podem ser iguais </p>
+      <p class="lead">- Nenhum lado pode ser igual a ZERO </p>
+    </div>
+  </div>
+
+  <footer class="blog-footer" style="text-align: center ; margin-top: 20px;">
+    <p>By Renan Santana <a href="https://github.com/RenanS85" target="_blank" >Github</a><p>
+    <a href="#">Voltar para o topo</a></p>
+  </footer>
+
+  {% include 'partials/_script.html' %}  
+
+</body>
+
+</html>

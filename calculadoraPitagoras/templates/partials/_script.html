@@ -1,0 +1,123 @@
+
+<script>
+
+    function onSubmitCalc(e)
+     {
+        
+        let hip = document.getElementById('hipotenusa').value
+        let co = document.getElementById('catetoOposto').value
+        let ca = document.getElementById('catetoAdjacente').value
+
+        let hipSqr = Math.pow(hip,2)
+        let coSqr = Math.pow(co,2)
+        let caSqr = Math.pow(ca,2)
+
+        let hipResult ;
+        let coResult ;
+        let caResult ;
+
+        if(hip && co && ca){
+            let use_api = true
+        }
+        else{
+
+        if (hip == 0 && co == 0 && ca == 0){
+            document.getElementById('hip').innerText = 'Aguardando...'
+            document.getElementById('catetoOp').innerText = 'Aguardando...'
+            document.getElementById('catetoAdj').innerText = 'Aguardando...'
+            alert('OPS, digite ao menos 2 valores')
+        }
+
+        else if (hip != 0 && co == 0 && ca == 0){
+            document.getElementById('hip').innerText = 'Aguardando...'
+            document.getElementById('catetoOp').innerText = 'Aguardando...'
+            document.getElementById('catetoAdj').innerText = 'Aguardando...'
+            alert('OPS, digite ao menos 2 valores')
+        }
+
+        else if (hip == 0 && co != 0 && ca == 0){
+            document.getElementById('hip').innerText = 'Aguardando...'
+            document.getElementById('catetoOp').innerText = 'Aguardando...'
+            document.getElementById('catetoAdj').innerText = 'Aguardando...'
+            alert('OPS, digite ao menos 2 valores')
+        }
+
+        else if (hip == 0 && co == 0 && ca != 0){
+            document.getElementById('hip').innerText = 'Aguardando...'
+            document.getElementById('catetoOp').innerText = 'Aguardando...'
+            document.getElementById('catetoAdj').innerText = 'Aguardando...'
+            alert('OPS, digite ao menos 2 valores')
+        }
+
+        else if (hip == 0 && co == 0 && ca != 0) {
+            document.getElementById('calculos').innerHTML = `</div>
+            <div class="alert alert-warning" role="alert">
+              OPS! Ao menos dois valores devem ser informados
+            </div>`
+        }
+
+        else if ( hip!=0 && co > hip) {
+            document.getElementById('hip').innerText = 'Inválido: a hipotenusa deve ser o maior lado'
+            document.getElementById('catetoOp').innerText = 'Inválido: a hipotenusa deve ser o maior lado'
+            document.getElementById('catetoAdj').innerText = 'Inválido: a hipotenusa deve ser o maior lado'  
+        }
+        else if (hip!=0 && ca > hip) {
+            document.getElementById('hip').innerText = 'Inválido: a hipotenusa deve ser o maior lado'
+            document.getElementById('catetoOp').innerText = 'Inválido: a hipotenusa deve ser o maior lado'
+            document.getElementById('catetoAdj').innerText = 'Inválido: a hipotenusa deve ser o maior lado'
+        }
+    
+        else if (hip == ca){
+            document.getElementById('hip').innerText = `${hip}`
+            document.getElementById('catetoOp').innerText = `Inválido: dei ZERO no cálculo`
+            document.getElementById('catetoAdj').innerText = `${ca}`
+    
+        }
+    
+        else if (hip == co){
+            document.getElementById('hip').innerText = `${hip}`
+            document.getElementById('catetoOp').innerText = `${co}`
+            document.getElementById('catetoAdj').innerText = `Inválido: dei ZERO no cálculo`
+    
+        }
+        
+        else if (hip && co) {
+            let caResult = Math.sqrt(hipSqr-coSqr) 
+            document.getElementById('hip').innerText = `${hip}`
+            document.getElementById('catetoOp').innerText = `${co}`
+            document.getElementById('catetoAdj').innerText = caResult.toFixed(2)}
+    
+        else if (hip && ca) {
+            let coResult = Math.sqrt(hipSqr-caSqr) 
+            document.getElementById('hip').innerText = `${hip}`
+            document.getElementById('catetoOp').innerText = coResult.toFixed(2)
+            document.getElementById('catetoAdj').innerText = `${ca}`}
+    
+        
+        else if (co && ca) {
+            let hipResult = (coSqr + caSqr)
+            document.getElementById('hip').innerText = hipResult.toFixed(2) 
+            document.getElementById('catetoOp').innerText = `${co}`
+            document.getElementById('catetoAdj').innerText = `${ca}`}
+        
+
+        e.preventDefault() 
+            return false 
+        }
+    }
+    
+
+    let form = document.getElementById('form')
+    if (form.attachEvent) {
+        form.attachEvent('submit', onSubmitCalc)
+    }
+    else {
+        form.addEventListener('submit',onSubmitCalc)
+    }
+
+    function api() {
+        document.getElementById('api').innerHTML = '<p></p>'
+    }
+
+</script>
+
