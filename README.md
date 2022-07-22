@@ -7,9 +7,11 @@
 <div id="descrição">
     <p>O projeto <a href="https://pitagoras-calculator.herokuapp.com/"> Pitagoras Calculator</a>(Calculadora de Pitágoras) é uma aplicação web que realiza funcionalidades referentes a relação matemática entre os comprimentos dos lados de um triângulo retângulo.</p>
 
-    <p>“Em qualquer triângulo retângulo, o quadrado do comprimento da hipotenusa é igual à soma dos quadrados dos comprimentos dos catetos".</p>
+    <p>Em qualquer triângulo retângulo, o quadrado do comprimento da hipotenusa é igual à soma dos quadrados dos comprimentos dos catetos.</p>
 </div>
 </div>
+
+
 
 
 
