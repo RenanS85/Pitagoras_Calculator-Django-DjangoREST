@@ -1,5 +1,6 @@
 <div>
 <p><a href="#descrição">Descrição</a></p>
+<p><a href="#api">API</a></p>
 <p><a href="#ferramentas">Ferramentas</a></p>
 </div>
     <div id="titulo e apresentação">
@@ -41,7 +42,8 @@
         Response [200]
         {'isvalid': False}<br><br>
         Response [400]
-        {'message': 'O campo hipotenusa não possui um inteiro válido. o valor informado foi valor errado'}
+        {'message': 'O campo hipotenusa não possui um inteiro válido. o valor informado foi valor errado'}<br><br>
+        Essas são as responses e os Json retornados pela API
     </p>
 </div>
 <div id="ferramentas">
