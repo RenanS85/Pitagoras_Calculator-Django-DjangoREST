@@ -13,8 +13,24 @@
     <h4>
         hipotenusa<sup>2</sup> = cateto oposto<sup>2</sup> + cateto adjacente<sup>2</sup>
     </h4>
+    <p>A relação entre os lados do triângulo retângulo permite, em se sabendo dois lados, calcular o terceiro</p>
+    <h4>cateto oposto =  &radic;(hipotenusa<sup>2</sup> - cateto adjacente<sup>2</sup>) </h4>
+    <h4>cateto adjacente =  &radic;(hipotenusa<sup>2</sup> - cateto oposto<sup>2</sup>) </h4>
 </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
