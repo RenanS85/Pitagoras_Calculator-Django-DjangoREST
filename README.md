@@ -1,12 +1,13 @@
-<div>
-<p><a href="#descrição">Descrição</a></p>
-<p><a href="#api">API</a></p>
-<p><a href="#ferramentas">Ferramentas</a></p>
-</div>
     <div id="titulo e apresentação">
         <h1>Pitagoras_Calculator-Django-DjangoREST</h1>
         <p>Calculadora destinada a realizar cálculos e validações de um triângulo retângulo. Back-end: Django e Django rest framework, Front-end: HTML, CSS e JS.</p> 
     </div>
+    <div>
+        <p><strong>Tópicos</strong></p>
+        <p><a href="#descrição">Descrição</a></p>
+        <p><a href="#api">API</a></p>
+        <p><a href="#ferramentas">Ferramentas</a></p>
+       </div>
     <div id="descrição">
         <p>O projeto <a href="https://pitagoras-calculator.herokuapp.com/" target="_blank"> Pitagoras Calculator</a>(Calculadora de Pitágoras) é uma aplicação web que realiza funcionalidades referentes a relação matemática entre os comprimentos dos lados de um triângulo retângulo.</p>
         <p>"Em qualquer triângulo retângulo, o quadrado do comprimento da hipotenusa é igual à soma dos quadrados dos comprimentos dos catetos."</p>
