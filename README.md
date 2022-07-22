@@ -2,7 +2,7 @@
 <div id="titulo e apresentação">
 <h1>Pitagoras_Calculator-Django-DjangoREST</h1>
 <p>Calculadora destinada a realizar cálculos e validações de um triângulo retângulo. Back-end: Django e Django rest framework, Front-end: HTML, CSS e JS.</p> 
-<p><a href="">Clique aqui </a>para acessar a aplicação ou utilize a URL: pitagoras-calculator.herokuapp.com</p>
+<p><a href="https://pitagoras-calculator.herokuapp.com/" target="_blank">Clique aqui </a>para acessar a aplicação ou utilize a URL: pitagoras-calculator.herokuapp.com</p>
 </div>
 <br>
 <br>
