@@ -26,7 +26,7 @@
         <p>A relação entre os lados do triângulo retângulo permite, em se sabendo dois lados, calcular o terceiro</p>
         <h4>cateto oposto =  &radic;(hipotenusa<sup>2</sup> - cateto adjacente<sup>2</sup>) </h4>
         <h4>cateto adjacente =  &radic;(hipotenusa<sup>2</sup> - cateto oposto<sup>2</sup>) </h4>
-        <p>O projeto <a href="https://pitagoras-calculator.herokuapp.com/" target="_blank"> Pitagoras Calculator</a> automatiza os cálculos para o usuário, de maneira que, ao se indicar dois lados para a aplicação, se obtém o valor do terceiro, <strong>se matemáticamente possível.</strong> Por exemplo, se após fornecer a hipotenusa e o cateto oposto, cateto adjacente for<strong>ZERO</strong>, o mesmo é um lado inválido.<a href="https://pitagoras-calculator.herokuapp.com/" target="_blank">Explore as possibilidades!</a></p>  
+        <p>O projeto <a href="https://pitagoras-calculator.herokuapp.com/" target="_blank"> Pitagoras Calculator</a> automatiza os cálculos para o usuário, de maneira que, ao se indicar dois lados para a aplicação se obtém o valor do terceiro, <strong>se matemáticamente possível.</strong> Por exemplo, se após fornecer a hipotenusa e o cateto oposto, cateto adjacente for<strong> ZERO</strong>, o mesmo é um lado inválido.<a href="https://pitagoras-calculator.herokuapp.com/" target="_blank">Explore as possibilidades!</a></p>  
     <div>
         <a href="https://pitagoras-calculator.herokuapp.com/" target="_blank"><img src="./calculadora pitágoras.png"></a>
     </div>
@@ -41,7 +41,7 @@
         <strong>No terminal:</strong> pip install requests<br><br>
         import <strong>request</strong><br><br>
         sua_variavel = requests.post('https://api-pitagoras.herokuapp.com/', <strong style="color: red ;">json = {"hipotenusa": var_de_hipotenusa, "catetoOposto": var_de_cateto_oposto , "catetoAdjacente": var_de_cateto_adjacente }</strong>)<br>
-        <h4>Atenção ao enviar o arquivo json, ele deve seguir o padrão acima, as chaves do objeto Json devem ser iguais as representadas, e cada chave recebe variáveis ou valores que você atribuir em seu Back-end</h4>
+        <h4>Atenção, ao enviar o arquivo json, ele deve seguir o padrão acima, as chaves do objeto Json devem ser iguais as representadas, e cada chave recebe variáveis ou valores que você atribuir em seu Back-end</h4>
     </p>
     <p>
         Response [200]
